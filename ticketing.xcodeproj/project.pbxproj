@@ -29,6 +29,15 @@
 		75D51D2E271AA20F00AF08F9 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D25271AA20E00AF08F9 /* Inter-Light.ttf */; };
 		75D51D2F271AA20F00AF08F9 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D26271AA20F00AF08F9 /* Inter-SemiBold.ttf */; };
 		75D51D30271AA20F00AF08F9 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D27271AA20F00AF08F9 /* Inter-Medium.ttf */; };
+		75D51D33271AB7CC00AF08F9 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D32271AB7CC00AF08F9 /* Application.swift */; };
+		75D51D37271AB81400AF08F9 /* TicketingTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D36271AB81400AF08F9 /* TicketingTarget.swift */; };
+		75D51D3A271ABB1000AF08F9 /* TicketApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D39271ABB1000AF08F9 /* TicketApi.swift */; };
+		75D51D3D271ABB2E00AF08F9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D3C271ABB2E00AF08F9 /* Category.swift */; };
+		75D51D3F271ABB6800AF08F9 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D3E271ABB6800AF08F9 /* Ticket.swift */; };
+		75D51D41271ABBBF00AF08F9 /* TicketAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D40271ABBBF00AF08F9 /* TicketAPIService.swift */; };
+		75F99473271AC13900961854 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F99472271AC13900961854 /* HomeViewController.swift */; };
+		75F99475271AC18F00961854 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F99474271AC18F00961854 /* Navigator.swift */; };
+		75F99477271AC28700961854 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F99476271AC28700961854 /* HomeViewModel.swift */; };
 		B55B85A5841CAA4CD77EAF9D /* Pods_ticketing_ticketingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CECC2D224227605D06455C /* Pods_ticketing_ticketingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +85,15 @@
 		75D51D25271AA20E00AF08F9 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
 		75D51D26271AA20F00AF08F9 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		75D51D27271AA20F00AF08F9 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		75D51D32271AB7CC00AF08F9 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		75D51D36271AB81400AF08F9 /* TicketingTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketingTarget.swift; sourceTree = "<group>"; };
+		75D51D39271ABB1000AF08F9 /* TicketApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketApi.swift; sourceTree = "<group>"; };
+		75D51D3C271ABB2E00AF08F9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		75D51D3E271ABB6800AF08F9 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		75D51D40271ABBBF00AF08F9 /* TicketAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketAPIService.swift; sourceTree = "<group>"; };
+		75F99472271AC13900961854 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		75F99474271AC18F00961854 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		75F99476271AC28700961854 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8E8344564F9DAB14093D3D65 /* Pods-ticketing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticketing.debug.xcconfig"; path = "Target Support Files/Pods-ticketing/Pods-ticketing.debug.xcconfig"; sourceTree = "<group>"; };
 		94A989C107E8EE75126CA240 /* Pods_ticketing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticketing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1CD69C83B2465E045A0B4F4 /* Pods-ticketing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticketing.release.xcconfig"; path = "Target Support Files/Pods-ticketing/Pods-ticketing.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,16 +169,15 @@
 		75D51CE027197F1A00AF08F9 /* ticketing */ = {
 			isa = PBXGroup;
 			children = (
+				75D51D1127197F3100AF08F9 /* Application */,
+				75D51D13271984B400AF08F9 /* Common */,
+				75D51D122719840200AF08F9 /* Delegates */,
+				75D51D3B271ABB2100AF08F9 /* Models */,
+				75D51D31271AB78900AF08F9 /* Modules */,
+				75D51D34271AB7F500AF08F9 /* Network */,
 				75D51D1D271AA1F200AF08F9 /* Resources */,
 				75D51D1A27199BBF00AF08F9 /* Styles */,
 				75D51D1427199B4300AF08F9 /* Views */,
-				75D51D13271984B400AF08F9 /* Common */,
-				75D51D122719840200AF08F9 /* Delegates */,
-				75D51D1127197F3100AF08F9 /* Application */,
-				75D51CE727197F1A00AF08F9 /* Main.storyboard */,
-				75D51CEA27197F1E00AF08F9 /* Assets.xcassets */,
-				75D51CEC27197F1E00AF08F9 /* LaunchScreen.storyboard */,
-				75D51CEF27197F1E00AF08F9 /* Info.plist */,
 			);
 			path = ticketing;
 			sourceTree = "<group>";
@@ -185,6 +202,8 @@
 		75D51D1127197F3100AF08F9 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				75D51D32271AB7CC00AF08F9 /* Application.swift */,
+				75F99474271AC18F00961854 /* Navigator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -234,6 +253,10 @@
 		75D51D1D271AA1F200AF08F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				75D51CEF27197F1E00AF08F9 /* Info.plist */,
+				75D51CEC27197F1E00AF08F9 /* LaunchScreen.storyboard */,
+				75D51CE727197F1A00AF08F9 /* Main.storyboard */,
+				75D51CEA27197F1E00AF08F9 /* Assets.xcassets */,
 				75D51D1E271AA1FC00AF08F9 /* Font */,
 			);
 			path = Resources;
@@ -252,6 +275,50 @@
 				75D51D26271AA20F00AF08F9 /* Inter-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		75D51D31271AB78900AF08F9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D43271ABFF100AF08F9 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		75D51D34271AB7F500AF08F9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D35271AB7FD00AF08F9 /* Targets */,
+				75D51D39271ABB1000AF08F9 /* TicketApi.swift */,
+				75D51D40271ABBBF00AF08F9 /* TicketAPIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		75D51D35271AB7FD00AF08F9 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D36271AB81400AF08F9 /* TicketingTarget.swift */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		75D51D3B271ABB2100AF08F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D3C271ABB2E00AF08F9 /* Category.swift */,
+				75D51D3E271ABB6800AF08F9 /* Ticket.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75D51D43271ABFF100AF08F9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				75F99472271AC13900961854 /* HomeViewController.swift */,
+				75F99476271AC28700961854 /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FC99A8744E5B08852551D9A6 /* Frameworks */ = {
@@ -476,11 +543,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75D51D3A271ABB1000AF08F9 /* TicketApi.swift in Sources */,
+				75D51D33271AB7CC00AF08F9 /* Application.swift in Sources */,
 				75D51D1C27199BE100AF08F9 /* ColorPalette.swift in Sources */,
+				75F99475271AC18F00961854 /* Navigator.swift in Sources */,
 				75D51CE627197F1A00AF08F9 /* ViewController.swift in Sources */,
 				75D51D1727199B5900AF08F9 /* TopHeaderView.swift in Sources */,
+				75D51D3D271ABB2E00AF08F9 /* Category.swift in Sources */,
 				75D51CE227197F1A00AF08F9 /* AppDelegate.swift in Sources */,
+				75D51D3F271ABB6800AF08F9 /* Ticket.swift in Sources */,
+				75F99477271AC28700961854 /* HomeViewModel.swift in Sources */,
+				75D51D41271ABBBF00AF08F9 /* TicketAPIService.swift in Sources */,
+				75D51D37271AB81400AF08F9 /* TicketingTarget.swift in Sources */,
 				75D51CE427197F1A00AF08F9 /* SceneDelegate.swift in Sources */,
+				75F99473271AC13900961854 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,7 +738,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K2TYLYAWMK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ticketing/Info.plist;
+				INFOPLIST_FILE = ticketing/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -691,7 +767,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K2TYLYAWMK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ticketing/Info.plist;
+				INFOPLIST_FILE = ticketing/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

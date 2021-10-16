@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var navigator: Navigator!
     var headerView: TopHeaderView!
     var contentView: UIView = {
         let view = UIView()
