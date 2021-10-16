@@ -1,6 +1,0 @@
-framework module Pods_ticketingTests {
-  umbrella header "Pods-ticketingTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
