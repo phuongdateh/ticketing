@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3108ECDB3D264446205B951D /* Pods_ticketing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A989C107E8EE75126CA240 /* Pods_ticketing.framework */; };
+		41DEED22DA9D11450702B93E /* Pods_ticketingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBBE8C4CE5DD909E11E8DCF /* Pods_ticketingTests.framework */; };
 		75D51CE227197F1A00AF08F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE127197F1A00AF08F9 /* AppDelegate.swift */; };
 		75D51CE427197F1A00AF08F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE327197F1A00AF08F9 /* SceneDelegate.swift */; };
 		75D51CE627197F1A00AF08F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE527197F1A00AF08F9 /* ViewController.swift */; };
@@ -16,6 +18,18 @@
 		75D51CF927197F1E00AF08F9 /* ticketingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CF827197F1E00AF08F9 /* ticketingTests.swift */; };
 		75D51D0327197F1E00AF08F9 /* ticketingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D0227197F1E00AF08F9 /* ticketingUITests.swift */; };
 		75D51D0527197F1E00AF08F9 /* ticketingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D0427197F1E00AF08F9 /* ticketingUITestsLaunchTests.swift */; };
+		75D51D1727199B5900AF08F9 /* TopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D1627199B5900AF08F9 /* TopHeaderView.swift */; };
+		75D51D1927199B7100AF08F9 /* TopHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D1827199B7100AF08F9 /* TopHeaderView.xib */; };
+		75D51D1C27199BE100AF08F9 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51D1B27199BE100AF08F9 /* ColorPalette.swift */; };
+		75D51D28271AA20F00AF08F9 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D1F271AA20E00AF08F9 /* Inter-ExtraLight.ttf */; };
+		75D51D29271AA20F00AF08F9 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D20271AA20E00AF08F9 /* Inter-Bold.ttf */; };
+		75D51D2A271AA20F00AF08F9 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D21271AA20E00AF08F9 /* Inter-ExtraBold.ttf */; };
+		75D51D2C271AA20F00AF08F9 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D23271AA20E00AF08F9 /* Inter-Regular.ttf */; };
+		75D51D2D271AA20F00AF08F9 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D24271AA20E00AF08F9 /* Inter-Black.ttf */; };
+		75D51D2E271AA20F00AF08F9 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D25271AA20E00AF08F9 /* Inter-Light.ttf */; };
+		75D51D2F271AA20F00AF08F9 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D26271AA20F00AF08F9 /* Inter-SemiBold.ttf */; };
+		75D51D30271AA20F00AF08F9 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75D51D27271AA20F00AF08F9 /* Inter-Medium.ttf */; };
+		B55B85A5841CAA4CD77EAF9D /* Pods_ticketing_ticketingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CECC2D224227605D06455C /* Pods_ticketing_ticketingUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FC79AAD22EC853FD11500B4 /* Pods-ticketingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticketingTests.debug.xcconfig"; path = "Target Support Files/Pods-ticketingTests/Pods-ticketingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		491A51FDFEA69897E85BCB84 /* Pods-ticketing-ticketingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticketing-ticketingUITests.debug.xcconfig"; path = "Target Support Files/Pods-ticketing-ticketingUITests/Pods-ticketing-ticketingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		75D51CDE27197F1A00AF08F9 /* ticketing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ticketing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D51CE127197F1A00AF08F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75D51CE327197F1A00AF08F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,24 @@
 		75D51CFE27197F1E00AF08F9 /* ticketingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ticketingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D51D0227197F1E00AF08F9 /* ticketingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketingUITests.swift; sourceTree = "<group>"; };
 		75D51D0427197F1E00AF08F9 /* ticketingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		75D51D1627199B5900AF08F9 /* TopHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeaderView.swift; sourceTree = "<group>"; };
+		75D51D1827199B7100AF08F9 /* TopHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopHeaderView.xib; sourceTree = "<group>"; };
+		75D51D1B27199BE100AF08F9 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		75D51D1F271AA20E00AF08F9 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		75D51D20271AA20E00AF08F9 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		75D51D21271AA20E00AF08F9 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		75D51D23271AA20E00AF08F9 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		75D51D24271AA20E00AF08F9 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		75D51D25271AA20E00AF08F9 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		75D51D26271AA20F00AF08F9 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		75D51D27271AA20F00AF08F9 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		8E8344564F9DAB14093D3D65 /* Pods-ticketing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticketing.debug.xcconfig"; path = "Target Support Files/Pods-ticketing/Pods-ticketing.debug.xcconfig"; sourceTree = "<group>"; };
+		94A989C107E8EE75126CA240 /* Pods_ticketing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticketing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1CD69C83B2465E045A0B4F4 /* Pods-ticketing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticketing.release.xcconfig"; path = "Target Support Files/Pods-ticketing/Pods-ticketing.release.xcconfig"; sourceTree = "<group>"; };
+		A3BEE27344722E13F78D2ABC /* Pods-ticketing-ticketingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticketing-ticketingUITests.release.xcconfig"; path = "Target Support Files/Pods-ticketing-ticketingUITests/Pods-ticketing-ticketingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A3CECC2D224227605D06455C /* Pods_ticketing_ticketingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticketing_ticketingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADBBE8C4CE5DD909E11E8DCF /* Pods_ticketingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticketingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1FB8A54CD28CC12EA7E0F2D /* Pods-ticketingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticketingTests.release.xcconfig"; path = "Target Support Files/Pods-ticketingTests/Pods-ticketingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3108ECDB3D264446205B951D /* Pods_ticketing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DEED22DA9D11450702B93E /* Pods_ticketingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +106,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55B85A5841CAA4CD77EAF9D /* Pods_ticketing_ticketingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64C3AF70C4C1260E67FE3C1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E8344564F9DAB14093D3D65 /* Pods-ticketing.debug.xcconfig */,
+				A1CD69C83B2465E045A0B4F4 /* Pods-ticketing.release.xcconfig */,
+				491A51FDFEA69897E85BCB84 /* Pods-ticketing-ticketingUITests.debug.xcconfig */,
+				A3BEE27344722E13F78D2ABC /* Pods-ticketing-ticketingUITests.release.xcconfig */,
+				3FC79AAD22EC853FD11500B4 /* Pods-ticketingTests.debug.xcconfig */,
+				D1FB8A54CD28CC12EA7E0F2D /* Pods-ticketingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		75D51CD527197F1A00AF08F9 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +133,8 @@
 				75D51CF727197F1E00AF08F9 /* ticketingTests */,
 				75D51D0127197F1E00AF08F9 /* ticketingUITests */,
 				75D51CDF27197F1A00AF08F9 /* Products */,
+				64C3AF70C4C1260E67FE3C1F /* Pods */,
+				FC99A8744E5B08852551D9A6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +151,12 @@
 		75D51CE027197F1A00AF08F9 /* ticketing */ = {
 			isa = PBXGroup;
 			children = (
+				75D51D1D271AA1F200AF08F9 /* Resources */,
+				75D51D1A27199BBF00AF08F9 /* Styles */,
+				75D51D1427199B4300AF08F9 /* Views */,
+				75D51D13271984B400AF08F9 /* Common */,
+				75D51D122719840200AF08F9 /* Delegates */,
 				75D51D1127197F3100AF08F9 /* Application */,
-				75D51CE127197F1A00AF08F9 /* AppDelegate.swift */,
-				75D51CE327197F1A00AF08F9 /* SceneDelegate.swift */,
-				75D51CE527197F1A00AF08F9 /* ViewController.swift */,
 				75D51CE727197F1A00AF08F9 /* Main.storyboard */,
 				75D51CEA27197F1E00AF08F9 /* Assets.xcassets */,
 				75D51CEC27197F1E00AF08F9 /* LaunchScreen.storyboard */,
@@ -135,6 +189,81 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		75D51D122719840200AF08F9 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				75D51CE127197F1A00AF08F9 /* AppDelegate.swift */,
+				75D51CE327197F1A00AF08F9 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		75D51D13271984B400AF08F9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				75D51CE527197F1A00AF08F9 /* ViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		75D51D1427199B4300AF08F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D1527199B4B00AF08F9 /* TopHeaderView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		75D51D1527199B4B00AF08F9 /* TopHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D1627199B5900AF08F9 /* TopHeaderView.swift */,
+				75D51D1827199B7100AF08F9 /* TopHeaderView.xib */,
+			);
+			path = TopHeaderView;
+			sourceTree = "<group>";
+		};
+		75D51D1A27199BBF00AF08F9 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D1B27199BE100AF08F9 /* ColorPalette.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		75D51D1D271AA1F200AF08F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D1E271AA1FC00AF08F9 /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		75D51D1E271AA1FC00AF08F9 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				75D51D24271AA20E00AF08F9 /* Inter-Black.ttf */,
+				75D51D20271AA20E00AF08F9 /* Inter-Bold.ttf */,
+				75D51D21271AA20E00AF08F9 /* Inter-ExtraBold.ttf */,
+				75D51D1F271AA20E00AF08F9 /* Inter-ExtraLight.ttf */,
+				75D51D25271AA20E00AF08F9 /* Inter-Light.ttf */,
+				75D51D27271AA20F00AF08F9 /* Inter-Medium.ttf */,
+				75D51D23271AA20E00AF08F9 /* Inter-Regular.ttf */,
+				75D51D26271AA20F00AF08F9 /* Inter-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		FC99A8744E5B08852551D9A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94A989C107E8EE75126CA240 /* Pods_ticketing.framework */,
+				A3CECC2D224227605D06455C /* Pods_ticketing_ticketingUITests.framework */,
+				ADBBE8C4CE5DD909E11E8DCF /* Pods_ticketingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D51D0827197F1E00AF08F9 /* Build configuration list for PBXNativeTarget "ticketing" */;
 			buildPhases = (
+				AEE3197D26D4F206EFC65329 /* [CP] Check Pods Manifest.lock */,
 				75D51CDA27197F1A00AF08F9 /* Sources */,
 				75D51CDB27197F1A00AF08F9 /* Frameworks */,
 				75D51CDC27197F1A00AF08F9 /* Resources */,
@@ -159,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D51D0B27197F1E00AF08F9 /* Build configuration list for PBXNativeTarget "ticketingTests" */;
 			buildPhases = (
+				C4C2F228F1659EE1EEE574FF /* [CP] Check Pods Manifest.lock */,
 				75D51CF027197F1E00AF08F9 /* Sources */,
 				75D51CF127197F1E00AF08F9 /* Frameworks */,
 				75D51CF227197F1E00AF08F9 /* Resources */,
@@ -177,6 +308,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D51D0E27197F1E00AF08F9 /* Build configuration list for PBXNativeTarget "ticketingUITests" */;
 			buildPhases = (
+				09E13082D333A3462097E1C2 /* [CP] Check Pods Manifest.lock */,
 				75D51CFA27197F1E00AF08F9 /* Sources */,
 				75D51CFB27197F1E00AF08F9 /* Frameworks */,
 				75D51CFC27197F1E00AF08F9 /* Resources */,
@@ -239,7 +371,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75D51D2F271AA20F00AF08F9 /* Inter-SemiBold.ttf in Resources */,
+				75D51D29271AA20F00AF08F9 /* Inter-Bold.ttf in Resources */,
+				75D51D2C271AA20F00AF08F9 /* Inter-Regular.ttf in Resources */,
 				75D51CEE27197F1E00AF08F9 /* LaunchScreen.storyboard in Resources */,
+				75D51D28271AA20F00AF08F9 /* Inter-ExtraLight.ttf in Resources */,
+				75D51D2A271AA20F00AF08F9 /* Inter-ExtraBold.ttf in Resources */,
+				75D51D1927199B7100AF08F9 /* TopHeaderView.xib in Resources */,
+				75D51D2D271AA20F00AF08F9 /* Inter-Black.ttf in Resources */,
+				75D51D2E271AA20F00AF08F9 /* Inter-Light.ttf in Resources */,
+				75D51D30271AA20F00AF08F9 /* Inter-Medium.ttf in Resources */,
 				75D51CEB27197F1E00AF08F9 /* Assets.xcassets in Resources */,
 				75D51CE927197F1A00AF08F9 /* Main.storyboard in Resources */,
 			);
@@ -261,12 +402,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09E13082D333A3462097E1C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ticketing-ticketingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE3197D26D4F206EFC65329 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ticketing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4C2F228F1659EE1EEE574FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ticketingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75D51CDA27197F1A00AF08F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75D51D1C27199BE100AF08F9 /* ColorPalette.swift in Sources */,
 				75D51CE627197F1A00AF08F9 /* ViewController.swift in Sources */,
+				75D51D1727199B5900AF08F9 /* TopHeaderView.swift in Sources */,
 				75D51CE227197F1A00AF08F9 /* AppDelegate.swift in Sources */,
 				75D51CE427197F1A00AF08F9 /* SceneDelegate.swift in Sources */,
 			);
@@ -442,6 +654,7 @@
 		};
 		75D51D0927197F1E00AF08F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E8344564F9DAB14093D3D65 /* Pods-ticketing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +683,7 @@
 		};
 		75D51D0A27197F1E00AF08F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1CD69C83B2465E045A0B4F4 /* Pods-ticketing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -498,6 +712,7 @@
 		};
 		75D51D0C27197F1E00AF08F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FC79AAD22EC853FD11500B4 /* Pods-ticketingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +738,7 @@
 		};
 		75D51D0D27197F1E00AF08F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1FB8A54CD28CC12EA7E0F2D /* Pods-ticketingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -548,6 +764,7 @@
 		};
 		75D51D0F27197F1E00AF08F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 491A51FDFEA69897E85BCB84 /* Pods-ticketing-ticketingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -571,6 +788,7 @@
 		};
 		75D51D1027197F1E00AF08F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3BEE27344722E13F78D2ABC /* Pods-ticketing-ticketingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
