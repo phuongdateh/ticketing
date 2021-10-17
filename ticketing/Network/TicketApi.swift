@@ -20,5 +20,5 @@ protocol TicketApi {
     func retrieveTicketByCategory(with id: Int,
                                   completion: @escaping ResultCompletion<[Ticket]>)
     func retrieveTicketDetail(with ticketId: Int,
-                              completion: @escaping ResultCompletion<[Ticket]>)
+                              completion: @escaping ResultCompletion<Ticket>)
 }

@@ -135,6 +135,10 @@ extension HomeViewController: UICollectionViewDelegate,
                   let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(TicketsCollectionViewCell.self)",
                                                                 for: indexPath) as? TicketsCollectionViewCell {
             cell.configure(self.viewModel.viewDataForCellAt(indexPath: indexPath).tickets)
+            cell.didSelectTicket = { [weak self] ticket in
+                self?.navigator.show(segue: .ticketDetail(ticketId: ticket.id),
+                                     sender: self, transition: .push)
+            }
             return cell
         }
         return .init()
@@ -150,7 +154,7 @@ extension HomeViewController: UICollectionViewDelegate,
         }
     }
 
-    private func getCurrentIndexPhoto() -> Int {
+    private func getCurrentIndexCategory() -> Int {
         let width = UIScreen.main.bounds.width
         let offsetX = self.ticketsCollectionView.contentOffset.x
         let currentIndex = Int.init(offsetX/width)
@@ -175,8 +179,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let collectioView = scrollView as? UICollectionView, collectioView == self.ticketsCollectionView else { return }
-        self.selectedCategoryId = self.viewModel.viewDataForCellAt(indexPath: IndexPath(row: 0, section: self.getCurrentIndexPhoto())).category.id
-        self.categoryCollectionView.scrollToItem(at: IndexPath(row: 0, section: self.getCurrentIndexPhoto()),
+        self.selectedCategoryId = self.viewModel.viewDataForCellAt(indexPath: IndexPath(row: 0, section: self.getCurrentIndexCategory())).category.id
+        self.categoryCollectionView.scrollToItem(at: IndexPath(row: 0, section: self.getCurrentIndexCategory()),
                                                  at: .centeredHorizontally,
                                                  animated: true)
         self.categoryCollectionView.reloadData()

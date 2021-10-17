@@ -45,6 +45,28 @@ class ViewController: UIViewController {
         self.mainStackView.addArrangedSubview(self.contentView)
     }
 
+    func addBackButtonView() {
+        let button = UIButton()
+        button.setTitle("", for: .normal)
+        button.setImage(UIImage(named: "back_ic"), for: .normal)
+        button.backgroundColor = .white
+        button.layer.cornerRadius = 18
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(backAction),
+                         for: .touchUpInside)
+        self.contentView.addSubview(button)
+        NSLayoutConstraint.activate([
+            button.heightAnchor.constraint(equalToConstant: 36),
+            button.widthAnchor.constraint(equalToConstant: 36),
+            button.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 17),
+            button.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 17)
+        ])
+        self.contentView.bringSubviewToFront(button)
+    }
+
+    @objc func backAction() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension ViewController {

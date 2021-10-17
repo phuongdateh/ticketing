@@ -45,7 +45,7 @@ extension TicketingTarget {
         case .tickets(let categoryId):
             return "categories/\(categoryId)"
         case .ticketdetail(let ticketId):
-            return "ticket/\(ticketId)"
+            return "tickets/\(ticketId)"
         }
     }
 

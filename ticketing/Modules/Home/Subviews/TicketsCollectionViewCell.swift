@@ -13,6 +13,7 @@ class TicketsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var emptyView: UIView!
 
     private var tickets = [Ticket]()
+    var didSelectTicket: ((Ticket) -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,5 +63,10 @@ extension TicketsCollectionViewCell: UITableViewDelegate,
         cell.configure(self.tickets[indexPath.row])
         cell.selectionStyle = .none
         return cell
+    }
+
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        self.didSelectTicket?(self.tickets[indexPath.row])
     }
 }

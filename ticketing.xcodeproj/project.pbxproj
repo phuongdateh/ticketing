@@ -14,6 +14,8 @@
 		75231654271AE47D006EA389 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75231652271AE47D006EA389 /* CategoryCollectionViewCell.xib */; };
 		75231657271AE4D4006EA389 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75231655271AE4D4006EA389 /* TicketTableViewCell.swift */; };
 		75231658271AE4D4006EA389 /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75231656271AE4D4006EA389 /* TicketTableViewCell.xib */; };
+		75480D51271BE2D60030462C /* TicketDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75480D50271BE2D60030462C /* TicketDetailViewController.swift */; };
+		75480D53271BE5160030462C /* TicketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75480D52271BE5160030462C /* TicketDetailViewModel.swift */; };
 		755EF310271AED4300AC8782 /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */; };
 		755EF311271AED4300AC8782 /* TicketsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */; };
 		75D51CE227197F1A00AF08F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE127197F1A00AF08F9 /* AppDelegate.swift */; };
@@ -74,6 +76,8 @@
 		75231652271AE47D006EA389 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		75231655271AE4D4006EA389 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		75231656271AE4D4006EA389 /* TicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
+		75480D50271BE2D60030462C /* TicketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailViewController.swift; sourceTree = "<group>"; };
+		75480D52271BE5160030462C /* TicketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailViewModel.swift; sourceTree = "<group>"; };
 		755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
 		755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsCollectionViewCell.xib; sourceTree = "<group>"; };
 		75D51CDE27197F1A00AF08F9 /* ticketing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ticketing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +183,15 @@
 				755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		75480D4F271BE2C50030462C /* TicketDetail */ = {
+			isa = PBXGroup;
+			children = (
+				75480D50271BE2D60030462C /* TicketDetailViewController.swift */,
+				75480D52271BE5160030462C /* TicketDetailViewModel.swift */,
+			);
+			path = TicketDetail;
 			sourceTree = "<group>";
 		};
 		75D51CD527197F1A00AF08F9 = {
@@ -319,6 +332,7 @@
 		75D51D31271AB78900AF08F9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				75480D4F271BE2C50030462C /* TicketDetail */,
 				75D51D43271ABFF100AF08F9 /* Home */,
 			);
 			path = Modules;
@@ -594,6 +608,7 @@
 				75D51D1C27199BE100AF08F9 /* ColorPalette.swift in Sources */,
 				75F99475271AC18F00961854 /* Navigator.swift in Sources */,
 				75D51CE627197F1A00AF08F9 /* ViewController.swift in Sources */,
+				75480D53271BE5160030462C /* TicketDetailViewModel.swift in Sources */,
 				75D51D1727199B5900AF08F9 /* TopHeaderView.swift in Sources */,
 				75D51D3D271ABB2E00AF08F9 /* Category.swift in Sources */,
 				75D51CE227197F1A00AF08F9 /* AppDelegate.swift in Sources */,
@@ -604,6 +619,7 @@
 				75D51D37271AB81400AF08F9 /* TicketingTarget.swift in Sources */,
 				75231657271AE4D4006EA389 /* TicketTableViewCell.swift in Sources */,
 				75D51CE427197F1A00AF08F9 /* SceneDelegate.swift in Sources */,
+				75480D51271BE2D60030462C /* TicketDetailViewController.swift in Sources */,
 				75F99473271AC13900961854 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,6 +808,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -821,6 +838,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

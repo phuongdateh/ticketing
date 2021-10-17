@@ -18,6 +18,7 @@ class Navigator {
     // MARK: - segues list, all app scenes
     enum Scene {
         case homeViewController
+        case ticketDetail(ticketId: Int)
     }
     
     enum Transition {
@@ -29,7 +30,11 @@ class Navigator {
 extension Navigator {
     func get(segue: Scene) -> UIViewController? {
         switch segue {
-        default: return nil
+        case .homeViewController:
+            return HomeViewController.instance(navigator: self)
+        case .ticketDetail(ticketId: let id):
+            return TicketDetailViewController.instance(navigator: self,
+                                                       ticketId: id)
         }
     }
     

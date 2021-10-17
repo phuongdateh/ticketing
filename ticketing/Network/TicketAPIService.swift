@@ -27,7 +27,7 @@ final class TicketAPIService: TicketApi {
     }
 
     func retrieveTicketDetail(with ticketId: Int,
-                              completion: @escaping ResultCompletion<[Ticket]>) {
+                              completion: @escaping ResultCompletion<Ticket>) {
         self.request(target: TicketingTarget.ticketdetail(ticketId),
                      completionHandler: completion)
     }
