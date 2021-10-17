@@ -6,6 +6,7 @@ target 'ticketing' do
   use_frameworks!
 
   # Pods for ticketing
+  pod 'HorizonCalendar'
 
   target 'ticketingTests' do
     inherit! :search_paths

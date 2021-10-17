@@ -18,6 +18,8 @@
 		75480D53271BE5160030462C /* TicketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75480D52271BE5160030462C /* TicketDetailViewModel.swift */; };
 		755EF310271AED4300AC8782 /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */; };
 		755EF311271AED4300AC8782 /* TicketsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */; };
+		758A97B7271C2BCA003D74BB /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A97B6271C2BCA003D74BB /* CalenderView.swift */; };
+		758A97B9271C2BD9003D74BB /* CalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758A97B8271C2BD9003D74BB /* CalendarView.xib */; };
 		75D51CE227197F1A00AF08F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE127197F1A00AF08F9 /* AppDelegate.swift */; };
 		75D51CE427197F1A00AF08F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE327197F1A00AF08F9 /* SceneDelegate.swift */; };
 		75D51CE627197F1A00AF08F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE527197F1A00AF08F9 /* ViewController.swift */; };
@@ -80,6 +82,8 @@
 		75480D52271BE5160030462C /* TicketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailViewModel.swift; sourceTree = "<group>"; };
 		755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
 		755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsCollectionViewCell.xib; sourceTree = "<group>"; };
+		758A97B6271C2BCA003D74BB /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
+		758A97B8271C2BD9003D74BB /* CalendarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarView.xib; sourceTree = "<group>"; };
 		75D51CDE27197F1A00AF08F9 /* ticketing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ticketing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D51CE127197F1A00AF08F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75D51CE327197F1A00AF08F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,10 +192,20 @@
 		75480D4F271BE2C50030462C /* TicketDetail */ = {
 			isa = PBXGroup;
 			children = (
+				758A97B5271C2BAD003D74BB /* Subviews */,
 				75480D50271BE2D60030462C /* TicketDetailViewController.swift */,
 				75480D52271BE5160030462C /* TicketDetailViewModel.swift */,
 			);
 			path = TicketDetail;
+			sourceTree = "<group>";
+		};
+		758A97B5271C2BAD003D74BB /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				758A97B6271C2BCA003D74BB /* CalenderView.swift */,
+				758A97B8271C2BD9003D74BB /* CalendarView.xib */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		75D51CD527197F1A00AF08F9 = {
@@ -396,6 +410,7 @@
 				75D51CDA27197F1A00AF08F9 /* Sources */,
 				75D51CDB27197F1A00AF08F9 /* Frameworks */,
 				75D51CDC27197F1A00AF08F9 /* Resources */,
+				F761727715AB1306FBAD53B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -433,6 +448,7 @@
 				75D51CFA27197F1E00AF08F9 /* Sources */,
 				75D51CFB27197F1E00AF08F9 /* Frameworks */,
 				75D51CFC27197F1E00AF08F9 /* Resources */,
+				968FB5D0B6086982C56FB0A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -498,6 +514,7 @@
 				75D51CEE27197F1E00AF08F9 /* LaunchScreen.storyboard in Resources */,
 				75D51D28271AA20F00AF08F9 /* Inter-ExtraLight.ttf in Resources */,
 				75D51D2A271AA20F00AF08F9 /* Inter-ExtraBold.ttf in Resources */,
+				758A97B9271C2BD9003D74BB /* CalendarView.xib in Resources */,
 				75231654271AE47D006EA389 /* CategoryCollectionViewCell.xib in Resources */,
 				75D51D1927199B7100AF08F9 /* TopHeaderView.xib in Resources */,
 				75D51D2D271AA20F00AF08F9 /* Inter-Black.ttf in Resources */,
@@ -549,6 +566,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		968FB5D0B6086982C56FB0A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ticketing-ticketingUITests/Pods-ticketing-ticketingUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ticketing-ticketingUITests/Pods-ticketing-ticketingUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ticketing-ticketingUITests/Pods-ticketing-ticketingUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AEE3197D26D4F206EFC65329 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +627,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F761727715AB1306FBAD53B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ticketing/Pods-ticketing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ticketing/Pods-ticketing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ticketing/Pods-ticketing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -606,6 +657,7 @@
 				75F9947A271AC61D00961854 /* Font.swift in Sources */,
 				75231653271AE47D006EA389 /* CategoryCollectionViewCell.swift in Sources */,
 				75D51D1C27199BE100AF08F9 /* ColorPalette.swift in Sources */,
+				758A97B7271C2BCA003D74BB /* CalenderView.swift in Sources */,
 				75F99475271AC18F00961854 /* Navigator.swift in Sources */,
 				75D51CE627197F1A00AF08F9 /* ViewController.swift in Sources */,
 				75480D53271BE5160030462C /* TicketDetailViewModel.swift in Sources */,

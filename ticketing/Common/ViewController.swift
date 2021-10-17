@@ -83,4 +83,22 @@ extension ViewController {
         self.contentView.addSubview(subView)
         subView.fitToSuperView()
     }
+
+    func showCalendarView() {
+        guard let calendarView = UINib(nibName: "\(CalendarView.self)", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CalendarView else { return }
+        let view = UIView()
+        view.backgroundColor = UIColor(red: 0.858, green: 0.858, blue: 0.858, alpha: 0.86)
+        self.contentView.addSubview(view)
+        view.fitToSuperView()
+        view.addSubview(calendarView)
+        calendarView.layer.cornerRadius = 10
+        calendarView.translatesAutoresizingMaskIntoConstraints = false
+        calendarView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+        calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+        calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
+
+        calendarView.closeAction = {
+            view.removeFromSuperview()
+        }
+    }
 }
