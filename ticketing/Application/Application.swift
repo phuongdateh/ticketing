@@ -11,19 +11,15 @@ import UIKit
 final class Application {
     static let `default` = Application()
     var window: UIWindow?
-    private var apiService: TicketApi?
-    
+    private let navigator: Navigator
+
     init() {
-        self.apiService = TicketAPIService()
+        self.navigator = Navigator.default
     }
-    
+
     func presentView(with window: UIWindow?) {
-        guard let window = window,
-        let apiService = apiService else {
-            return
-        }
+        guard let window = window else { return }
         self.window = window
-        let navigationController = UINavigationController(rootViewController: ViewController())
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = UINavigationController(rootViewController: HomeViewController.instance(navigator: self.navigator))
     }
 }

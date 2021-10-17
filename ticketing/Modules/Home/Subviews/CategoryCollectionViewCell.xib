@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="ticketing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="148" height="99"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="148" height="99"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqc-no-Krv">
+                        <rect key="frame" x="0.0" y="0.0" width="148" height="99"/>
+                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fzf-rR-DDG">
+                        <rect key="frame" x="0.0" y="97" width="148" height="2"/>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.19607843137254902" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="wee-jy-TSx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Fzf-rR-DDG" secondAttribute="bottom" id="4Ge-MZ-NCu"/>
+                <constraint firstAttribute="bottom" secondItem="xqc-no-Krv" secondAttribute="bottom" id="Jdc-eL-aYu"/>
+                <constraint firstAttribute="trailing" secondItem="Fzf-rR-DDG" secondAttribute="trailing" id="MEo-xR-wMi"/>
+                <constraint firstItem="xqc-no-Krv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="R0L-Ea-syj"/>
+                <constraint firstItem="Fzf-rR-DDG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WDA-AF-kPc"/>
+                <constraint firstAttribute="trailing" secondItem="xqc-no-Krv" secondAttribute="trailing" id="jlA-6L-xDj"/>
+                <constraint firstItem="xqc-no-Krv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uAm-LO-2Zs"/>
+            </constraints>
+            <size key="customSize" width="148" height="99"/>
+            <connections>
+                <outlet property="indicatorView" destination="Fzf-rR-DDG" id="t4J-h9-UVH"/>
+                <outlet property="nameLbl" destination="xqc-no-Krv" id="W9V-Ga-fHG"/>
+            </connections>
+            <point key="canvasLocation" x="66.666666666666671" y="169.08482142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>

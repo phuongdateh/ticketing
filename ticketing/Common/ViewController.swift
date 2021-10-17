@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         return view
     }()
 
-    lazy var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 0
@@ -54,5 +54,11 @@ extension ViewController {
         self.headerView = view
         self.headerView.translatesAutoresizingMaskIntoConstraints = false
         self.headerView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+    }
+
+    func addSubContentView(_ subView: UIView) {
+        subView.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.addSubview(subView)
+        subView.fitToSuperView()
     }
 }

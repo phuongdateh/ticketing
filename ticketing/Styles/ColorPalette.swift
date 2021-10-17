@@ -12,6 +12,18 @@ struct ColorPalette {
     static var background: UIColor = {
         return 0x123262.color
     }()
+
+    static var black: UIColor = {
+        return 0x000000.color
+    }()
+
+    static var gray: UIColor = {
+        return 0x8D8D8D.color
+    }()
+
+    static var border: UIColor = {
+        return 0xC4C4C4.color
+    }()
 }
 
 private extension Int {
