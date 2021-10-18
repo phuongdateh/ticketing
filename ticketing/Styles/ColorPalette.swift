@@ -28,6 +28,10 @@ struct ColorPalette {
     static var gray86: UIColor = {
         return 0xDBDBDB.color
     }()
+
+    static var blue: UIColor = {
+        return 0xE7F2FE.color
+    }()
 }
 
 private extension Int {

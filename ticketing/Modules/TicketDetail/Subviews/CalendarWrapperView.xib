@@ -18,8 +18,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CalendarView" customModule="ticketing" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CalendarWrapperView" customModule="ticketing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="501"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date of Visit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdB-6A-lCJ">
@@ -74,14 +74,14 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-ml-IQx">
-                    <rect key="frame" x="25" y="115" width="364" height="205"/>
+                    <rect key="frame" x="15" y="115" width="384" height="306"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="205" id="wpu-3h-2YT"/>
+                        <constraint firstAttribute="height" constant="306" id="wpu-3h-2YT"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-YE-EWX">
-                    <rect key="frame" x="25" y="340" width="364" height="40"/>
+                    <rect key="frame" x="25" y="441" width="364" height="40"/>
                     <color key="backgroundColor" red="0.90588235294117647" green="0.94901960784313721" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="yFk-xk-Uva"/>
@@ -94,11 +94,11 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ao8-YE-EWX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="067-gc-idB"/>
-                <constraint firstItem="pQc-ml-IQx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="1Fl-PD-kf0"/>
+                <constraint firstItem="pQc-ml-IQx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="1Fl-PD-kf0"/>
                 <constraint firstItem="z1d-Tc-Y0I" firstAttribute="top" secondItem="pdB-6A-lCJ" secondAttribute="bottom" constant="10" id="3cG-Du-UAD"/>
                 <constraint firstItem="pdB-6A-lCJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="7rR-dl-sIw"/>
                 <constraint firstAttribute="trailing" secondItem="WTt-Cl-Gz3" secondAttribute="trailing" constant="20" id="96E-pb-zvs"/>
-                <constraint firstAttribute="trailing" secondItem="pQc-ml-IQx" secondAttribute="trailing" constant="25" id="DLn-Gs-Cbq"/>
+                <constraint firstAttribute="trailing" secondItem="pQc-ml-IQx" secondAttribute="trailing" constant="15" id="DLn-Gs-Cbq"/>
                 <constraint firstItem="pdB-6A-lCJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="GDj-aR-oEd"/>
                 <constraint firstAttribute="trailing" secondItem="ao8-YE-EWX" secondAttribute="trailing" constant="25" id="Hex-qY-YCb"/>
                 <constraint firstItem="WTt-Cl-Gz3" firstAttribute="centerY" secondItem="pdB-6A-lCJ" secondAttribute="centerY" id="JqU-AE-e6o"/>
@@ -113,7 +113,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="calendarView" destination="pQc-ml-IQx" id="NFf-8G-r7B"/>
+                <outlet property="calendarWrapperView" destination="pQc-ml-IQx" id="NFf-8G-r7B"/>
                 <outlet property="closeButton" destination="WTt-Cl-Gz3" id="9OV-zX-yi0"/>
                 <outlet property="dayView" destination="gQk-jU-BIU" id="lHX-7O-Adp"/>
                 <outlet property="selectButtonLabel" destination="ao8-YE-EWX" id="e9t-7o-dGR"/>

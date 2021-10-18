@@ -18,8 +18,8 @@
 		75480D53271BE5160030462C /* TicketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75480D52271BE5160030462C /* TicketDetailViewModel.swift */; };
 		755EF310271AED4300AC8782 /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */; };
 		755EF311271AED4300AC8782 /* TicketsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */; };
-		758A97B7271C2BCA003D74BB /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A97B6271C2BCA003D74BB /* CalenderView.swift */; };
-		758A97B9271C2BD9003D74BB /* CalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758A97B8271C2BD9003D74BB /* CalendarView.xib */; };
+		758A97B7271C2BCA003D74BB /* CalendarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A97B6271C2BCA003D74BB /* CalendarWrapperView.swift */; };
+		758A97B9271C2BD9003D74BB /* CalendarWrapperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758A97B8271C2BD9003D74BB /* CalendarWrapperView.xib */; };
 		75D51CE227197F1A00AF08F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE127197F1A00AF08F9 /* AppDelegate.swift */; };
 		75D51CE427197F1A00AF08F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE327197F1A00AF08F9 /* SceneDelegate.swift */; };
 		75D51CE627197F1A00AF08F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D51CE527197F1A00AF08F9 /* ViewController.swift */; };
@@ -82,8 +82,8 @@
 		75480D52271BE5160030462C /* TicketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailViewModel.swift; sourceTree = "<group>"; };
 		755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
 		755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsCollectionViewCell.xib; sourceTree = "<group>"; };
-		758A97B6271C2BCA003D74BB /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
-		758A97B8271C2BD9003D74BB /* CalendarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarView.xib; sourceTree = "<group>"; };
+		758A97B6271C2BCA003D74BB /* CalendarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWrapperView.swift; sourceTree = "<group>"; };
+		758A97B8271C2BD9003D74BB /* CalendarWrapperView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarWrapperView.xib; sourceTree = "<group>"; };
 		75D51CDE27197F1A00AF08F9 /* ticketing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ticketing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D51CE127197F1A00AF08F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75D51CE327197F1A00AF08F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,8 +202,8 @@
 		758A97B5271C2BAD003D74BB /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				758A97B6271C2BCA003D74BB /* CalenderView.swift */,
-				758A97B8271C2BD9003D74BB /* CalendarView.xib */,
+				758A97B6271C2BCA003D74BB /* CalendarWrapperView.swift */,
+				758A97B8271C2BD9003D74BB /* CalendarWrapperView.xib */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -233,10 +233,10 @@
 		75D51CE027197F1A00AF08F9 /* ticketing */ = {
 			isa = PBXGroup;
 			children = (
-				7523164D271ADF0E006EA389 /* Extensions */,
 				75D51D1127197F3100AF08F9 /* Application */,
 				75D51D13271984B400AF08F9 /* Common */,
 				75D51D122719840200AF08F9 /* Delegates */,
+				7523164D271ADF0E006EA389 /* Extensions */,
 				75D51D3B271ABB2100AF08F9 /* Models */,
 				75D51D31271AB78900AF08F9 /* Modules */,
 				75D51D34271AB7F500AF08F9 /* Network */,
@@ -514,7 +514,7 @@
 				75D51CEE27197F1E00AF08F9 /* LaunchScreen.storyboard in Resources */,
 				75D51D28271AA20F00AF08F9 /* Inter-ExtraLight.ttf in Resources */,
 				75D51D2A271AA20F00AF08F9 /* Inter-ExtraBold.ttf in Resources */,
-				758A97B9271C2BD9003D74BB /* CalendarView.xib in Resources */,
+				758A97B9271C2BD9003D74BB /* CalendarWrapperView.xib in Resources */,
 				75231654271AE47D006EA389 /* CategoryCollectionViewCell.xib in Resources */,
 				75D51D1927199B7100AF08F9 /* TopHeaderView.xib in Resources */,
 				75D51D2D271AA20F00AF08F9 /* Inter-Black.ttf in Resources */,
@@ -657,7 +657,7 @@
 				75F9947A271AC61D00961854 /* Font.swift in Sources */,
 				75231653271AE47D006EA389 /* CategoryCollectionViewCell.swift in Sources */,
 				75D51D1C27199BE100AF08F9 /* ColorPalette.swift in Sources */,
-				758A97B7271C2BCA003D74BB /* CalenderView.swift in Sources */,
+				758A97B7271C2BCA003D74BB /* CalendarWrapperView.swift in Sources */,
 				75F99475271AC18F00961854 /* Navigator.swift in Sources */,
 				75D51CE627197F1A00AF08F9 /* ViewController.swift in Sources */,
 				75480D53271BE5160030462C /* TicketDetailViewModel.swift in Sources */,

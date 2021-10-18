@@ -85,7 +85,7 @@ extension ViewController {
     }
 
     func showCalendarView() {
-        guard let calendarView = UINib(nibName: "\(CalendarView.self)", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CalendarView else { return }
+        guard let calendarView = UINib(nibName: "\(CalendarWrapperView.self)", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CalendarWrapperView else { return }
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.858, green: 0.858, blue: 0.858, alpha: 0.86)
         self.contentView.addSubview(view)
