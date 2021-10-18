@@ -29,10 +29,21 @@ final class TicketDetailViewController: ViewController {
         stackView.distribution = .fill
         return stackView
     }()
+    private lazy var addToCartView: UIView = {
+        return self.createAddToCartButtonView()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addSubviews()
+        CartManager.shared.cartDidChange = { [weak self] in
+            let itemIds = CartManager.shared.items.map({$0.id})
+            if itemIds.contains(self?.viewModel.ticketId ?? 0) {
+                self?.addToCartView.isHidden = true
+            } else {
+                self?.addToCartView.isHidden = true
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +89,7 @@ final class TicketDetailViewController: ViewController {
         self.stackView.addArrangedSubview(self.createLabel(text: ticket.description ?? "",
                                                            font: .interRegular(size: 11)))
         self.stackView.addArrangedSubview(self.createSeparateView(height: 25))
-        self.stackView.addArrangedSubview(self.createAddToCartButtonView())
+        self.stackView.addArrangedSubview(self.addToCartView)
     }
 }
 
@@ -143,5 +154,53 @@ extension TicketDetailViewController {
     @objc private func addToCartAction() {
         print(#function)
         self.showCalendarView()
+    }
+
+    func showCalendarView() {
+        guard let calendarView = UINib(nibName: "\(CalendarWrapperView.self)", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CalendarWrapperView else { return }
+        let view = UIView()
+        view.backgroundColor = UIColor(red: 0.858, green: 0.858, blue: 0.858, alpha: 0.86)
+        self.contentView.addSubview(view)
+        view.fitToSuperView()
+        view.addSubview(calendarView)
+        calendarView.layer.cornerRadius = 10
+        calendarView.translatesAutoresizingMaskIntoConstraints = false
+        calendarView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+        calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
+        calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
+
+        calendarView.closeAction = {
+            view.removeFromSuperview()
+        }
+        calendarView.didSelectDay = { day in
+            guard let ticket = self.viewModel.ticket else { return }
+            self.showItemView(with: ticket)
+        }
+    }
+
+    func showItemView(with ticket: Ticket) {
+        guard let itemView = UINib(nibName: "\(ItemView.self)", bundle: nil).instantiate(withOwner: nil, options: nil).first as? ItemView else { return }
+        itemView.ticket = self.viewModel.ticket
+        itemView.renderItemView()
+
+
+        let view = UIView()
+        view.backgroundColor = UIColor(red: 0.858, green: 0.858, blue: 0.858, alpha: 0.86)
+        self.contentView.addSubview(view)
+        view.fitToSuperView()
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        stackView.addArrangedSubview(itemView)
+        itemView.closeAction = {
+            view.removeFromSuperview()
+        }
     }
 }

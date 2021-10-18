@@ -18,7 +18,7 @@ final class CalendarWrapperView: UIView {
     @IBOutlet weak var closeButton: UIButton!
 
     var closeAction: (() -> Void)?
-    var didSelectDay: ((Day) -> Void)?
+    var didSelectDay: ((Day?) -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,11 +26,17 @@ final class CalendarWrapperView: UIView {
         self.selectButtonLabel.layer.cornerRadius = 5
         self.selectButtonLabel.layer.masksToBounds = true
         self.selectButtonLabel.isUserInteractionEnabled = true
+        self.selectButtonLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectButtonLabelTapped)))
 
         self.dayView.layer.borderColor = UIColor(red: 0.758, green: 0.812, blue: 0.867, alpha: 1).cgColor
         self.dayView.layer.borderWidth = 1.5
         self.dayView.layer.cornerRadius = 4
         self.addCalendarView()
+    }
+
+    @objc private func selectButtonLabelTapped() {
+        self.closeAction?()
+        self.didSelectDay?(self.selectedDay)
     }
 
     @IBAction func closeButtonAction() {
@@ -52,7 +58,7 @@ final class CalendarWrapperView: UIView {
         calendarView.daySelectionHandler = { day in
             self.selectedDay = day
             self.renderColorSelectLabelButton()
-            self.didSelectDay?(day)
+//            self.didSelectDay?(day)
             calendarView.setContent(self.makeContent())
         }
     }

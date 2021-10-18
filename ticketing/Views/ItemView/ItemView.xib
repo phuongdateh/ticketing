@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ItemView" customModule="ticketing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="262"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mock_image" translatesAutoresizingMaskIntoConstraints="NO" id="hkX-c6-AwU">
+                    <rect key="frame" x="25" y="16" width="46" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="3H9-va-WHz"/>
+                        <constraint firstAttribute="width" constant="46" id="b6n-na-exg"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUa-rf-CAH">
+                    <rect key="frame" x="87" y="16" width="42.5" height="19.5"/>
+                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Q6-LR-uy6">
+                    <rect key="frame" x="87" y="48.5" width="41.5" height="19.5"/>
+                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeK-in-SpR">
+                    <rect key="frame" x="362" y="10" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="RbH-ta-YM6"/>
+                        <constraint firstAttribute="width" constant="32" id="aPe-aL-JJk"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="close_ic"/>
+                    <connections>
+                        <action selector="closeButtonAction" destination="iN0-l3-epB" eventType="touchUpInside" id="rQ7-7t-a5H"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jlp-53-bWA">
+                    <rect key="frame" x="20" y="84" width="374" height="1"/>
+                    <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="C4R-dm-rdQ"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VRR-qq-T0b">
+                    <rect key="frame" x="20" y="115" width="203" height="31"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyp-Ut-jnl">
+                            <rect key="frame" x="0.0" y="0.0" width="115" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Singaporean/PR">
+                                <fontDescription key="titleFontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="singaporeanAction" destination="iN0-l3-epB" eventType="touchUpInside" id="uao-eb-R8g"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2c-ai-f55">
+                            <rect key="frame" x="125" y="0.0" width="78" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Foreigner">
+                                <fontDescription key="titleFontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                                <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="foreignerAction" destination="iN0-l3-epB" eventType="touchUpInside" id="fnW-Ay-NDU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGB-0Y-JcO">
+                    <rect key="frame" x="20" y="162" width="374" height="1"/>
+                    <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="JmR-fn-TQK"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqN-x7-drn">
+                    <rect key="frame" x="20" y="179" width="374" height="15"/>
+                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nationality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhK-4d-gaj">
+                    <rect key="frame" x="20" y="90" width="374" height="15"/>
+                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qb2-SN-sSz">
+                    <rect key="frame" x="20" y="210" width="146" height="32"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-ZX-Hgr">
+                            <rect key="frame" x="0.0" y="0.0" width="43" height="32"/>
+                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="-" titleAlignment="center">
+                                <fontDescription key="titleFontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                                <color key="baseForegroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="descreaseAction" destination="iN0-l3-epB" eventType="touchUpInside" id="Fsx-Xm-Mwl"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMX-JZ-qCj">
+                            <rect key="frame" x="43" y="0.0" width="60" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="hJM-6A-dQM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHy-T2-R3X">
+                            <rect key="frame" x="103" y="0.0" width="43" height="32"/>
+                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="43" id="L0n-Y0-3jh"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="+">
+                                <fontDescription key="titleFontDescription" name="Inter-Bold" family="Inter" pointSize="25"/>
+                                <color key="baseForegroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="increaseAction" destination="iN0-l3-epB" eventType="touchUpInside" id="kgP-4t-0LV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="A10-MU-sXF"/>
+                        <constraint firstItem="KHy-T2-R3X" firstAttribute="width" secondItem="bKd-ZX-Hgr" secondAttribute="width" id="jeW-RK-pN7"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejT-yf-zeL">
+                    <rect key="frame" x="272.5" y="207.5" width="121.5" height="37"/>
+                    <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Add To Cart">
+                        <fontDescription key="titleFontDescription" name="Inter-Bold" family="Inter" pointSize="14"/>
+                        <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="20"/>
+                        <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="addToCartAction" destination="iN0-l3-epB" eventType="touchUpInside" id="qbf-rf-0Yi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jlp-53-bWA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="4ck-Ik-B7a"/>
+                <constraint firstItem="BeK-in-SpR" firstAttribute="centerY" secondItem="xUa-rf-CAH" secondAttribute="centerY" id="9tN-UZ-VII"/>
+                <constraint firstItem="xUa-rf-CAH" firstAttribute="leading" secondItem="hkX-c6-AwU" secondAttribute="trailing" constant="16" id="Cbt-cb-hRD"/>
+                <constraint firstItem="qb2-SN-sSz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="CdJ-cJ-ycW"/>
+                <constraint firstItem="5Q6-LR-uy6" firstAttribute="bottom" secondItem="hkX-c6-AwU" secondAttribute="bottom" id="Fd3-jv-nJL"/>
+                <constraint firstItem="VRR-qq-T0b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="FeN-iq-OoI"/>
+                <constraint firstAttribute="bottom" secondItem="qb2-SN-sSz" secondAttribute="bottom" constant="20" id="GcS-lz-zkW"/>
+                <constraint firstItem="5Q6-LR-uy6" firstAttribute="leading" secondItem="hkX-c6-AwU" secondAttribute="trailing" constant="16" id="JYj-xJ-f4C"/>
+                <constraint firstItem="RGB-0Y-JcO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="MJG-p9-BCQ"/>
+                <constraint firstAttribute="trailing" secondItem="jlp-53-bWA" secondAttribute="trailing" constant="20" id="MRl-Mh-MRQ"/>
+                <constraint firstItem="AhK-4d-gaj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="R1K-wu-9vt"/>
+                <constraint firstAttribute="trailing" secondItem="AhK-4d-gaj" secondAttribute="trailing" constant="20" id="Rr1-m3-WOk"/>
+                <constraint firstItem="RGB-0Y-JcO" firstAttribute="top" secondItem="VRR-qq-T0b" secondAttribute="bottom" constant="16" id="VmP-Li-LqR"/>
+                <constraint firstItem="qb2-SN-sSz" firstAttribute="top" secondItem="pqN-x7-drn" secondAttribute="bottom" constant="16" id="XnE-HF-Mn6"/>
+                <constraint firstItem="jlp-53-bWA" firstAttribute="top" secondItem="hkX-c6-AwU" secondAttribute="bottom" constant="16" id="aI9-FY-LpB"/>
+                <constraint firstItem="ejT-yf-zeL" firstAttribute="centerY" secondItem="qb2-SN-sSz" secondAttribute="centerY" id="bQZ-cm-rLo"/>
+                <constraint firstAttribute="trailing" secondItem="pqN-x7-drn" secondAttribute="trailing" constant="20" id="cow-YY-s3x"/>
+                <constraint firstItem="VRR-qq-T0b" firstAttribute="top" secondItem="AhK-4d-gaj" secondAttribute="bottom" constant="10" id="d40-aK-hlc"/>
+                <constraint firstItem="pqN-x7-drn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="eZZ-en-ZZ2"/>
+                <constraint firstItem="xUa-rf-CAH" firstAttribute="top" secondItem="hkX-c6-AwU" secondAttribute="top" id="fWD-5A-PiB"/>
+                <constraint firstAttribute="trailing" secondItem="RGB-0Y-JcO" secondAttribute="trailing" constant="20" id="luO-bA-tEE"/>
+                <constraint firstAttribute="trailing" secondItem="BeK-in-SpR" secondAttribute="trailing" constant="20" id="lw2-Su-o7Z"/>
+                <constraint firstItem="hkX-c6-AwU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="mvJ-mV-KGa"/>
+                <constraint firstItem="pqN-x7-drn" firstAttribute="top" secondItem="RGB-0Y-JcO" secondAttribute="bottom" constant="16" id="q0Y-fW-8hH"/>
+                <constraint firstItem="hkX-c6-AwU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="vHQ-zw-bT6"/>
+                <constraint firstItem="AhK-4d-gaj" firstAttribute="top" secondItem="jlp-53-bWA" secondAttribute="bottom" constant="5" id="vp7-kN-lrB"/>
+                <constraint firstAttribute="trailing" secondItem="ejT-yf-zeL" secondAttribute="trailing" constant="20" id="yWT-K1-gVw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addToCartButton" destination="ejT-yf-zeL" id="QOi-hw-gUs"/>
+                <outlet property="closeButton" destination="BeK-in-SpR" id="mWX-TC-gdR"/>
+                <outlet property="descreaseButton" destination="bKd-ZX-Hgr" id="2gL-9i-HgQ"/>
+                <outlet property="foreignerButton" destination="E2c-ai-f55" id="3kb-Pi-UFm"/>
+                <outlet property="increseButton" destination="KHy-T2-R3X" id="vdD-ci-yk7"/>
+                <outlet property="priceLbl" destination="5Q6-LR-uy6" id="2dV-tY-jd9"/>
+                <outlet property="quantityLbl" destination="aMX-JZ-qCj" id="5nB-1k-LoU"/>
+                <outlet property="quantityStackView" destination="qb2-SN-sSz" id="mn8-Pl-xWz"/>
+                <outlet property="singaporeanButton" destination="Zyp-Ut-jnl" id="cYh-Kq-lfB"/>
+                <outlet property="titleLbl" destination="xUa-rf-CAH" id="mFZ-R9-Vd4"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="-59.598214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close_ic" width="13" height="13"/>
+        <image name="mock_image" width="375" height="309"/>
+    </resources>
+</document>
