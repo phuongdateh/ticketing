@@ -88,6 +88,9 @@ final class HomeViewController: ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        guard self.viewModel.shouldFetchData() else {
+            return
+        }
         self.viewModel.willFetchData()
     }
 

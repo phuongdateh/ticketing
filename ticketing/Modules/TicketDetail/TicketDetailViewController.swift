@@ -35,15 +35,8 @@ final class TicketDetailViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addToCartView.isUserInteractionEnabled = true
         self.addSubviews()
-        CartManager.shared.cartDidChange = { [weak self] in
-            let itemIds = CartManager.shared.items.map({$0.id})
-            if itemIds.contains(self?.viewModel.ticketId ?? 0) {
-                self?.addToCartView.isHidden = true
-            } else {
-                self?.addToCartView.isHidden = true
-            }
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +83,7 @@ final class TicketDetailViewController: ViewController {
                                                            font: .interRegular(size: 11)))
         self.stackView.addArrangedSubview(self.createSeparateView(height: 25))
         self.stackView.addArrangedSubview(self.addToCartView)
+        self.addToCartView.isHidden = CartManager.shared.isExit(ticket: ticket)
     }
 }
 
@@ -182,7 +176,7 @@ extension TicketDetailViewController {
         guard let itemView = UINib(nibName: "\(ItemView.self)", bundle: nil).instantiate(withOwner: nil, options: nil).first as? ItemView else { return }
         itemView.ticket = self.viewModel.ticket
         itemView.renderItemView()
-
+        itemView.addToCartButton.alpha = CartManager.shared.isExit(ticket: itemView.ticket) ? 0 : 1
 
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.858, green: 0.858, blue: 0.858, alpha: 0.86)
@@ -201,6 +195,10 @@ extension TicketDetailViewController {
         stackView.addArrangedSubview(itemView)
         itemView.closeAction = {
             view.removeFromSuperview()
+        }
+        itemView.addToCartButtonAction = {
+            self.addToCartView.alpha = 0
+            self.addToCartView.isUserInteractionEnabled = false
         }
     }
 }

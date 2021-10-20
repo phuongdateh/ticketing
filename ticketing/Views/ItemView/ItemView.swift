@@ -26,9 +26,11 @@ final class ItemView: UIView {
     let cartManager = CartManager.shared
     var ticket: Ticket!
     var closeAction: (() -> Void)?
+    var addToCartButtonAction: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.addToCartButton.isUserInteractionEnabled = true
         self.closeButton.setTitle("", for: .normal)
         self.singaporeanButton.layer.borderColor = UIColor(red: 0.412, green: 0.412, blue: 0.412, alpha: 0.3).cgColor
         self.singaporeanButton.layer.borderWidth = 0.5
@@ -63,7 +65,9 @@ final class ItemView: UIView {
 
     @IBAction func addToCartAction() {
         self.cartManager.addToCart(with: self.ticket)
-//        self.closeAction?()
+        self.addToCartButton.alpha = 0
+        self.addToCartButton.isUserInteractionEnabled = false
+        self.addToCartButtonAction?()
     }
 
     @IBAction func increaseAction() {

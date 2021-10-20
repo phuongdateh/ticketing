@@ -57,6 +57,12 @@ final class CartManager {
     func notify() {
         self.cartDidChange?()
     }
+
+    func isExit(ticket: Ticket) -> Bool {
+        return self.items.contains { item in
+            return item.id == ticket.id
+        }
+    }
 }
 
 class Item {

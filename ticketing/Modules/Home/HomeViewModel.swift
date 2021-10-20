@@ -22,6 +22,10 @@ final class HomeViewModel {
         self.retrieveCategories()
     }
 
+    func shouldFetchData() -> Bool {
+        return self.viewDatas.isEmpty
+    }
+
     private func retrieveCategories() {
         self.apiService.retrieveCategories { [weak self] result in
             switch result {
