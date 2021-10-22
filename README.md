@@ -6,7 +6,7 @@
 - Language: Swift 5
 
 ## 2. App's demonstrate
-
+/Users/phuongdoan/Codes/ticketing/App's demonstrate.gif
 ## 3. What I have done in this app
 
 * Used MVVM architecture.
