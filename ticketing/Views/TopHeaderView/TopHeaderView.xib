@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -57,6 +58,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="cartButtonTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="gs6-as-8L0"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -73,6 +77,12 @@
                 <constraint firstItem="D7G-rf-70D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="zPd-CU-Zul"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cartButton" destination="pgD-hG-sOs" id="C1I-0z-eSl"/>
+                <outlet property="itemCountLbl" destination="2yH-g3-MHB" id="nim-RY-Ind"/>
+                <outlet property="itemCountView" destination="XIV-GW-JOl" id="TF6-Q6-sec"/>
+                <outlet property="titleLbl" destination="D7G-rf-70D" id="Tnp-q5-21q"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>

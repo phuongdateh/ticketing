@@ -19,6 +19,7 @@ class Navigator {
     enum Scene {
         case homeViewController
         case ticketDetail(ticketId: Int)
+        case cart
     }
     
     enum Transition {
@@ -35,6 +36,8 @@ extension Navigator {
         case .ticketDetail(ticketId: let id):
             return TicketDetailViewController.instance(navigator: self,
                                                        ticketId: id)
+        case .cart:
+            return CartViewController.instance(navigator: self)
         }
     }
     

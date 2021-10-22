@@ -76,6 +76,12 @@ extension ViewController {
         self.headerView = view
         self.headerView.translatesAutoresizingMaskIntoConstraints = false
         self.headerView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        self.headerView.didTapCartButton = { [weak self] in
+            if self is CartViewController {
+                return
+            }
+            self?.navigator.show(segue: .cart, sender: self, transition: .push)
+        }
     }
 
     func addSubContentView(_ subView: UIView) {
