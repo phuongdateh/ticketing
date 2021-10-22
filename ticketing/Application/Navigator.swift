@@ -20,6 +20,7 @@ class Navigator {
         case homeViewController
         case ticketDetail(ticketId: Int)
         case cart
+        case checkoutSuccess
     }
     
     enum Transition {
@@ -38,9 +39,11 @@ extension Navigator {
                                                        ticketId: id)
         case .cart:
             return CartViewController.instance(navigator: self)
+        case .checkoutSuccess:
+            return CheckoutSuccessViewController.instance
         }
     }
-    
+
     func show(segue: Scene, sender: UIViewController?, transition: Transition) {
         if let target = get(segue: segue) {
             show(target: target, sender: sender, transition: transition)

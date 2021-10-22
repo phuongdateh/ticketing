@@ -22,6 +22,8 @@
 		754A8A6D2722F7EF0058FEDA /* CartItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754A8A6B2722F7EF0058FEDA /* CartItemTableViewCell.xib */; };
 		754A8A6F272309820058FEDA /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A8A6E272309820058FEDA /* PopupView.swift */; };
 		754A8A712723099B0058FEDA /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754A8A702723099B0058FEDA /* PopupView.xib */; };
+		754A8A7427230F190058FEDA /* CheckoutSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A8A7327230F190058FEDA /* CheckoutSuccessViewController.swift */; };
+		754A8A7627230F420058FEDA /* CheckoutSuccess.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 754A8A7527230F420058FEDA /* CheckoutSuccess.storyboard */; };
 		755EF310271AED4300AC8782 /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */; };
 		755EF311271AED4300AC8782 /* TicketsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */; };
 		758A97B7271C2BCA003D74BB /* CalendarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A97B6271C2BCA003D74BB /* CalendarWrapperView.swift */; };
@@ -97,6 +99,8 @@
 		754A8A6B2722F7EF0058FEDA /* CartItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTableViewCell.xib; sourceTree = "<group>"; };
 		754A8A6E272309820058FEDA /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		754A8A702723099B0058FEDA /* PopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
+		754A8A7327230F190058FEDA /* CheckoutSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutSuccessViewController.swift; sourceTree = "<group>"; };
+		754A8A7527230F420058FEDA /* CheckoutSuccess.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckoutSuccess.storyboard; sourceTree = "<group>"; };
 		755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
 		755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsCollectionViewCell.xib; sourceTree = "<group>"; };
 		758A97B6271C2BCA003D74BB /* CalendarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWrapperView.swift; sourceTree = "<group>"; };
@@ -232,6 +236,15 @@
 				754A8A702723099B0058FEDA /* PopupView.xib */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		754A8A7227230F050058FEDA /* CheckoutSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				754A8A7327230F190058FEDA /* CheckoutSuccessViewController.swift */,
+				754A8A7527230F420058FEDA /* CheckoutSuccess.storyboard */,
+			);
+			path = CheckoutSuccess;
 			sourceTree = "<group>";
 		};
 		758A97B5271C2BAD003D74BB /* Subviews */ = {
@@ -392,6 +405,7 @@
 		75D51D31271AB78900AF08F9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				754A8A7227230F050058FEDA /* CheckoutSuccess */,
 				75D6587727205ECF0043C86C /* Cart */,
 				75480D4F271BE2C50030462C /* TicketDetail */,
 				75D51D43271ABFF100AF08F9 /* Home */,
@@ -582,6 +596,7 @@
 				75D51D30271AA20F00AF08F9 /* Inter-Medium.ttf in Resources */,
 				755EF311271AED4300AC8782 /* TicketsCollectionViewCell.xib in Resources */,
 				75231658271AE4D4006EA389 /* TicketTableViewCell.xib in Resources */,
+				754A8A7627230F420058FEDA /* CheckoutSuccess.storyboard in Resources */,
 				754A8A712723099B0058FEDA /* PopupView.xib in Resources */,
 				75D51CEB27197F1E00AF08F9 /* Assets.xcassets in Resources */,
 				75D51CE927197F1A00AF08F9 /* Main.storyboard in Resources */,
@@ -732,6 +747,7 @@
 				75D51CE227197F1A00AF08F9 /* AppDelegate.swift in Sources */,
 				75D51D3F271ABB6800AF08F9 /* Ticket.swift in Sources */,
 				75D6587B27205F1B0043C86C /* CartViewModel.swift in Sources */,
+				754A8A7427230F190058FEDA /* CheckoutSuccessViewController.swift in Sources */,
 				75F99477271AC28700961854 /* HomeViewModel.swift in Sources */,
 				7523164F271ADF1D006EA389 /* UIViewExtentions.swift in Sources */,
 				75D51D41271ABBBF00AF08F9 /* TicketAPIService.swift in Sources */,

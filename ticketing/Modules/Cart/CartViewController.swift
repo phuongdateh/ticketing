@@ -99,7 +99,7 @@ extension CartViewController {
     private func createSubTotalView() -> UIView {
         guard let view = CartSummaryView.instance as? CartSummaryView else { return .init()}
         view.didTapConfirmButton = {
-            
+            self.navigator.show(segue: .checkoutSuccess, sender: self, transition: .push)
         }
         self.subTotalView = view
         return view

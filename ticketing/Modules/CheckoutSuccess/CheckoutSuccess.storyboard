@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Checkout Success View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CheckoutSuccessViewController" id="Y6W-OH-hqX" customClass="CheckoutSuccessViewController" customModule="ticketing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success icon" translatesAutoresizingMaskIntoConstraints="NO" id="8rN-EM-aP7">
+                                <rect key="frame" x="153" y="394" width="108" height="108"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout Success" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-wE-QJA">
+                                <rect key="frame" x="0.0" y="532" width="414" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.1960784314" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please hold on while we redirect you to the ticket home page." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-8O-itv">
+                                <rect key="frame" x="40" y="591.5" width="334" height="44"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="18"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.1960784314" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNH-w1-hQ4">
+                                <rect key="frame" x="139.5" y="655.5" width="135.5" height="40"/>
+                                <color key="backgroundColor" red="0.070588235289999995" green="0.1960784314" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gVK-fG-TGB"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back To Home">
+                                    <fontDescription key="titleFontDescription" name="Inter-Bold" family="Inter" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8rN-EM-aP7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8pr-Fg-5cI"/>
+                            <constraint firstItem="gTG-wE-QJA" firstAttribute="top" secondItem="8rN-EM-aP7" secondAttribute="bottom" constant="30" id="9ZI-2q-OSP"/>
+                            <constraint firstItem="Zak-8O-itv" firstAttribute="top" secondItem="gTG-wE-QJA" secondAttribute="bottom" constant="30" id="Fro-V1-TNT"/>
+                            <constraint firstItem="mNH-w1-hQ4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="M6Q-d0-JxR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gTG-wE-QJA" secondAttribute="trailing" id="WcN-5p-DlV"/>
+                            <constraint firstItem="gTG-wE-QJA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="eRp-A7-Mh8"/>
+                            <constraint firstItem="Zak-8O-itv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="mfv-Es-VKd"/>
+                            <constraint firstItem="8rN-EM-aP7" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="oBa-om-hJb"/>
+                            <constraint firstItem="mNH-w1-hQ4" firstAttribute="top" secondItem="Zak-8O-itv" secondAttribute="bottom" constant="20" id="qxw-bL-38g"/>
+                            <constraint firstAttribute="trailing" secondItem="Zak-8O-itv" secondAttribute="trailing" constant="40" id="sTw-pC-WEh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backToHomeButton" destination="mNH-w1-hQ4" id="6Ia-5U-Dyh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="success icon" width="108" height="108"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
