@@ -6,7 +6,7 @@
 - Language: Swift 5
 
 ## 2. App's demonstrate
-![App](https://user-images.githubusercontent.com/19536343/138492592-7e8b5321-b6be-4c28-b539-3b9106257e3a.gif)
+![App](https://user-images.githubusercontent.com/19536343/138493720-2082da10-cad9-4acd-b444-d42a464b6815.gif)
 ## 3. What I have done in this app
 
 * Used MVVM architecture.
