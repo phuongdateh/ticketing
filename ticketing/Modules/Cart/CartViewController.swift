@@ -71,6 +71,9 @@ extension CartViewController: UITableViewDelegate,
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(CartItemTableViewCell.self)", for: indexPath) as? CartItemTableViewCell else { return .init()}
         cell.configureData(item: cartManager.items[indexPath.row])
         cell.selectionStyle = .none
+        cell.removeItemAction = { item in
+            self.showPopup()
+        }
         return cell
     }
 }
@@ -108,5 +111,25 @@ extension CartViewController {
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true
         view.backgroundColor = ColorPalette.grayu
         return view
+    }
+
+    private func showPopup() {
+        let view = UIView()
+        self.addSubContentView(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.fitToSuperView()
+        view.backgroundColor = .clear
+        if let popupView = PopupView.instance {
+            view.addSubview(popupView)
+            popupView.translatesAutoresizingMaskIntoConstraints = false
+            popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+            popupView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            popupView.removeAction = {
+                
+            }
+            popupView.cancelAction = {
+                view.removeFromSuperview()
+            }
+        }
     }
 }

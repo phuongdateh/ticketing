@@ -20,6 +20,8 @@
 		754A8A692722F1A30058FEDA /* CartSummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754A8A682722F1A20058FEDA /* CartSummaryView.xib */; };
 		754A8A6C2722F7EF0058FEDA /* CartItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A8A6A2722F7EF0058FEDA /* CartItemTableViewCell.swift */; };
 		754A8A6D2722F7EF0058FEDA /* CartItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754A8A6B2722F7EF0058FEDA /* CartItemTableViewCell.xib */; };
+		754A8A6F272309820058FEDA /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A8A6E272309820058FEDA /* PopupView.swift */; };
+		754A8A712723099B0058FEDA /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 754A8A702723099B0058FEDA /* PopupView.xib */; };
 		755EF310271AED4300AC8782 /* TicketsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */; };
 		755EF311271AED4300AC8782 /* TicketsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */; };
 		758A97B7271C2BCA003D74BB /* CalendarWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758A97B6271C2BCA003D74BB /* CalendarWrapperView.swift */; };
@@ -93,6 +95,8 @@
 		754A8A682722F1A20058FEDA /* CartSummaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartSummaryView.xib; sourceTree = "<group>"; };
 		754A8A6A2722F7EF0058FEDA /* CartItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemTableViewCell.swift; sourceTree = "<group>"; };
 		754A8A6B2722F7EF0058FEDA /* CartItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTableViewCell.xib; sourceTree = "<group>"; };
+		754A8A6E272309820058FEDA /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		754A8A702723099B0058FEDA /* PopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		755EF30E271AED4300AC8782 /* TicketsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsCollectionViewCell.swift; sourceTree = "<group>"; };
 		755EF30F271AED4300AC8782 /* TicketsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketsCollectionViewCell.xib; sourceTree = "<group>"; };
 		758A97B6271C2BCA003D74BB /* CalendarWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWrapperView.swift; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 				754A8A682722F1A20058FEDA /* CartSummaryView.xib */,
 				754A8A6A2722F7EF0058FEDA /* CartItemTableViewCell.swift */,
 				754A8A6B2722F7EF0058FEDA /* CartItemTableViewCell.xib */,
+				754A8A6E272309820058FEDA /* PopupView.swift */,
+				754A8A702723099B0058FEDA /* PopupView.xib */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -576,6 +582,7 @@
 				75D51D30271AA20F00AF08F9 /* Inter-Medium.ttf in Resources */,
 				755EF311271AED4300AC8782 /* TicketsCollectionViewCell.xib in Resources */,
 				75231658271AE4D4006EA389 /* TicketTableViewCell.xib in Resources */,
+				754A8A712723099B0058FEDA /* PopupView.xib in Resources */,
 				75D51CEB27197F1E00AF08F9 /* Assets.xcassets in Resources */,
 				75D51CE927197F1A00AF08F9 /* Main.storyboard in Resources */,
 			);
@@ -708,6 +715,7 @@
 				755EF310271AED4300AC8782 /* TicketsCollectionViewCell.swift in Sources */,
 				75D51D3A271ABB1000AF08F9 /* TicketApi.swift in Sources */,
 				754A8A672722F18B0058FEDA /* CartSummaryView.swift in Sources */,
+				754A8A6F272309820058FEDA /* PopupView.swift in Sources */,
 				75D51D33271AB7CC00AF08F9 /* Application.swift in Sources */,
 				75F9947A271AC61D00961854 /* Font.swift in Sources */,
 				75231653271AE47D006EA389 /* CategoryCollectionViewCell.swift in Sources */,

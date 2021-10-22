@@ -18,6 +18,7 @@ class CartItemTableViewCell: UITableViewCell {
     
     let cartManager = CartManager.shared
     var item: Item!
+    var removeItemAction: ((Item) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +37,10 @@ class CartItemTableViewCell: UITableViewCell {
     }
 
     @objc private func decreaseButtonTouchUpInside() {
+        guard self.item.quantity > 1 else {
+            self.removeItemAction?(self.item)
+            return
+        }
         cartManager.decrease(of: self.item.ticket)
     }
 
