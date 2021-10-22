@@ -57,8 +57,8 @@ final class CalendarWrapperView: UIView {
         calendarView.fitToSuperView()
         calendarView.daySelectionHandler = { day in
             self.selectedDay = day
+            self.valueDayLbl.text = "\(day)"
             self.renderColorSelectLabelButton()
-//            self.didSelectDay?(day)
             calendarView.setContent(self.makeContent())
         }
     }
