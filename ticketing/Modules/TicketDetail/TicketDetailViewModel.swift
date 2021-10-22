@@ -18,6 +18,10 @@ final class TicketDetailViewModel {
         self.apiService = apiService
     }
 
+    func shouldFetchData() -> Bool {
+        return self.ticket == nil
+    }
+
     func retrieveTicketDetail(success: @escaping (() -> Void),
                               failure: @escaping (() -> Void)) {
         self.apiService.retrieveTicketDetail(with: self.ticketId) { [weak self] result in

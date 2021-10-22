@@ -42,6 +42,7 @@ final class TicketDetailViewController: ViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        guard self.viewModel.shouldFetchData() else { return }
         self.willFetchData()
     }
 
