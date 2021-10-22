@@ -28,15 +28,50 @@ final class CartViewController: ViewController {
         return UITableView(frame: .zero, style: .plain)
     }()
 
+    private var subTotalView: CartSummaryView?
+    lazy var cartManager: CartManager = CartManager.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureTableView()
         self.addSubContentView(self.stackView)
         self.stackView.fitToSuperView()
 
         self.stackView.addArrangedSubview(self.createTitleView())
+        self.stackView.addArrangedSubview(self.createSpaceView())
         self.stackView.addArrangedSubview(self.tableView)
         self.stackView.addArrangedSubview(self.createSpaceView())
         self.stackView.addArrangedSubview(self.createSubTotalView())
+        self.cartManager.cartDidChange = {
+            self.tableView.reloadData()
+            self.subTotalView?.updatePrice()
+        }
+    }
+
+    private func configureTableView() {
+        self.tableView.register(UINib(nibName: "\(CartItemTableViewCell.self)", bundle: nil), forCellReuseIdentifier: "\(CartItemTableViewCell.self)")
+        self.tableView.backgroundColor = .white
+        self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        self.tableView.separatorColor = ColorPalette.grayu
+        self.tableView.rowHeight = 109
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+}
+
+extension CartViewController: UITableViewDelegate,
+                              UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        return cartManager.items.count
+    }
+
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(CartItemTableViewCell.self)", for: indexPath) as? CartItemTableViewCell else { return .init()}
+        cell.configureData(item: cartManager.items[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
     }
 }
 
@@ -63,6 +98,7 @@ extension CartViewController {
         view.didTapConfirmButton = {
             
         }
+        self.subTotalView = view
         return view
     }
 

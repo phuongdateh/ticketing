@@ -167,7 +167,8 @@ extension TicketDetailViewController {
             view.removeFromSuperview()
         }
         calendarView.didSelectDay = { day in
-            guard let ticket = self.viewModel.ticket else { return }
+            guard let ticket = self.viewModel.ticket, let day = day else { return }
+            CartManager.shared.dateOfVisit = "\(day)"
             self.showItemView(with: ticket)
         }
     }
