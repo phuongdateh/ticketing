@@ -52,6 +52,17 @@ class ViewController: UIViewController {
     }
 
     func addBackButtonView() {
+        self.contentView.addSubview(self.backButton)
+        NSLayoutConstraint.activate([
+            self.backButton.heightAnchor.constraint(equalToConstant: 36),
+            self.backButton.widthAnchor.constraint(equalToConstant: 36),
+            self.backButton.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 17),
+            self.backButton.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 17)
+        ])
+        self.contentView.bringSubviewToFront(self.backButton)
+    }
+
+    lazy var backButton: UIButton = {
         let button = UIButton()
         button.setTitle("", for: .normal)
         button.setImage(UIImage(named: "back_ic"), for: .normal)
@@ -60,15 +71,8 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(backAction),
                          for: .touchUpInside)
-        self.contentView.addSubview(button)
-        NSLayoutConstraint.activate([
-            button.heightAnchor.constraint(equalToConstant: 36),
-            button.widthAnchor.constraint(equalToConstant: 36),
-            button.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 17),
-            button.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 17)
-        ])
-        self.contentView.bringSubviewToFront(button)
-    }
+        return button
+    }()
 
     @objc func backAction() {
         self.navigationController?.popViewController(animated: true)

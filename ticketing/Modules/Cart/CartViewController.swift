@@ -38,6 +38,7 @@ final class CartViewController: ViewController {
         self.addSubContentView(self.stackView)
         self.stackView.fitToSuperView()
 
+        self.stackView.addArrangedSubview(self.createBackButtonView())
         self.stackView.addArrangedSubview(self.createTitleView())
         self.stackView.addArrangedSubview(self.createSpaceView())
         self.stackView.addArrangedSubview(self.tableView)
@@ -111,6 +112,16 @@ extension CartViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true
         view.backgroundColor = ColorPalette.grayu
+        return view
+    }
+
+    private func createBackButtonView() -> UIView {
+        let view = UIView()
+        view.addSubview(self.backButton)
+        self.backButton.translatesAutoresizingMaskIntoConstraints = false
+        self.backButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
+        self.backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        self.backButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         return view
     }
 
