@@ -22,12 +22,29 @@ class TopHeaderView: UIView {
 
         self.cartButton.setTitle("", for: .normal)
         self.backgroundColor = ColorPalette.background
-        CartManager.shared.cartDidChange = {
-            let count = CartManager.shared.items.count
-            self.itemCountLbl.text = "\(count)"
-        }
         self.itemCountView.layer.cornerRadius = self.itemCountView.frame.height / 2
         self.itemCountView.backgroundColor = .red
+        self.itemCountLbl.textColor = .white
+        self.titleLbl.numberOfLines = 0
+    }
+
+    func updateTitle(title: String) {
+        let titleAttributedText = NSMutableAttributedString()
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 5
+        style.alignment = .left
+        titleAttributedText.append(NSAttributedString(string: title + "\n", attributes: [.font: UIFont.interBold(size: 14)!, .foregroundColor: UIColor.white, .paragraphStyle: style]))
+        titleAttributedText.append(NSAttributedString(string: "National Museum Wakanda", attributes: [.font: UIFont.interRegular(size: 12)!, .foregroundColor: UIColor.white]))
+        self.titleLbl.attributedText = titleAttributedText
+    }
+
+    func updateCartView() {
+        let count = CartManager.shared.items.count
+        guard count > 0 else {
+            self.itemCountLbl.text = ""
+            return
+        }
+        self.itemCountLbl.text = "\(count)"
     }
 
     @IBAction func cartButtonTouchUpInside(_ sender: Any) {

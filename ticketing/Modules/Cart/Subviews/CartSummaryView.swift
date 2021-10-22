@@ -26,10 +26,10 @@ class CartSummaryView: UIView {
         super.awakeFromNib()
         self.confirmButton.layer.cornerRadius = 4
         self.confirmButton.addTarget(self, action: #selector(confirmButtonTouchUpInside), for: .touchUpInside)
-        self.cartManager.cartDidChange = {
-            self.updatePrice()
-        }
         self.updatePrice()
+        self.cartManager.registerChange {[weak self] in
+            self?.updatePrice()
+        }
     }
 
     func updatePrice() {

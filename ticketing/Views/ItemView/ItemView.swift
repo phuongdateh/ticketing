@@ -54,7 +54,7 @@ final class ItemView: UIView {
         self.descreaseButton.layer.borderWidth = 1
         self.descreaseButton.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
 
-        cartManager.cartDidChange = { [weak self] in
+        self.cartManager.registerChange { [weak self] in
             self?.renderItemView()
         }
     }

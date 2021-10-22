@@ -19,6 +19,8 @@ class CheckoutSuccessViewController: UIViewController {
         super.viewDidLoad()
         self.backToHomeButton.layer.cornerRadius = 4
         self.backToHomeButton.addTarget(self, action: #selector(backToHomeTouchUpInside), for: .touchUpInside)
+
+        CartManager.shared.reset()
     }
 
     @objc private func backToHomeTouchUpInside() {

@@ -50,6 +50,7 @@ final class HomeViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setTitle(title: "Ticketing")
         self.layoutViews()
         self.addArrangedSubviews()
         self.configureCategoryCollectionView()

@@ -33,6 +33,7 @@ final class CartViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setTitle(title: "Cart")
         self.configureTableView()
         self.addSubContentView(self.stackView)
         self.stackView.fitToSuperView()
@@ -42,9 +43,9 @@ final class CartViewController: ViewController {
         self.stackView.addArrangedSubview(self.tableView)
         self.stackView.addArrangedSubview(self.createSpaceView())
         self.stackView.addArrangedSubview(self.createSubTotalView())
-        self.cartManager.cartDidChange = {
-            self.tableView.reloadData()
-            self.subTotalView?.updatePrice()
+        self.cartManager.registerChange { [weak self] in
+            self?.tableView.reloadData()
+            self?.subTotalView?.updatePrice()
         }
     }
 

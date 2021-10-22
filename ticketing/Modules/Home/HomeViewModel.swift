@@ -13,6 +13,7 @@ final class HomeViewModel {
     var didFetchData: (() -> Void)?
     var didFailure: ((ErrorData) -> Void)?
     private let group = DispatchGroup.init()
+    lazy var cartManager: CartManager = CartManager.shared
 
     init(apiService: TicketApi = TicketAPIService()) {
         self.apiService = apiService

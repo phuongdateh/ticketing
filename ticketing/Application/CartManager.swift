@@ -22,7 +22,6 @@ final class CartManager {
             self.notify()
         }
     }
-    var cartDidChange: (() -> Void)?
 
     func create(with dateOfVisit: String,
                 item: Item) {
@@ -54,8 +53,14 @@ final class CartManager {
         self.notify()
     }
 
+    func registerChange(block: (() -> Void)?) {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.init(rawValue: "test"), object: self, queue: .main) { _ in
+            block?()
+        }
+    }
+
     func notify() {
-        self.cartDidChange?()
+        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "test"), object: self)
     }
 
     func isExit(ticket: Ticket) -> Bool {

@@ -35,6 +35,7 @@ final class TicketDetailViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setTitle(title: "Ticket Details")
         self.addToCartView.isUserInteractionEnabled = true
         self.addSubviews()
     }

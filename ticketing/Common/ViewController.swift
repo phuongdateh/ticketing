@@ -35,9 +35,15 @@ class ViewController: UIViewController {
             self.mainStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.mainStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
         ])
-
         self.configureTopHeaderView()
         self.addArrangedSubviews()
+        CartManager.shared.registerChange { [weak self] in
+            self?.headerView.updateCartView()
+        }
+    }
+
+    func setTitle(title: String) {
+        self.headerView.updateTitle(title: title)
     }
 
     private func addArrangedSubviews() {
@@ -67,6 +73,10 @@ class ViewController: UIViewController {
     @objc func backAction() {
         self.navigationController?.popViewController(animated: true)
     }
+
+    deinit {
+        print("Deinited \(Self.classForCoder())")
+    }
 }
 
 extension ViewController {
@@ -82,6 +92,7 @@ extension ViewController {
             }
             self?.navigator.show(segue: .cart, sender: self, transition: .push)
         }
+        self.headerView.updateCartView()
     }
 
     func addSubContentView(_ subView: UIView) {
