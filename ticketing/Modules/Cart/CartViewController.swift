@@ -74,7 +74,7 @@ extension CartViewController: UITableViewDelegate,
         cell.configureData(item: cartManager.items[indexPath.row])
         cell.selectionStyle = .none
         cell.removeItemAction = { item in
-            self.showPopup()
+            self.showPopup(with: item)
         }
         return cell
     }
@@ -101,6 +101,7 @@ extension CartViewController {
     private func createSubTotalView() -> UIView {
         guard let view = CartSummaryView.instance as? CartSummaryView else { return .init()}
         view.didTapConfirmButton = {
+            guard self.cartManager.items.isEmpty == false else { return }
             self.navigator.show(segue: .checkoutSuccess, sender: self, transition: .push)
         }
         self.subTotalView = view
@@ -125,7 +126,7 @@ extension CartViewController {
         return view
     }
 
-    private func showPopup() {
+    private func showPopup(with item: Item) {
         let view = UIView()
         self.addSubContentView(view)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -137,7 +138,8 @@ extension CartViewController {
             popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
             popupView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
             popupView.removeAction = {
-                
+                CartManager.shared.removeFromCart(with: item.ticket)
+                view.removeFromSuperview()
             }
             popupView.cancelAction = {
                 view.removeFromSuperview()
